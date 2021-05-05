@@ -9,8 +9,10 @@ This project uses the same provider setup from [terraform-provider-aws](https://
 ## Example usage
 
 ```hcl
+data "aws_ssoadmin_instances" "sso" {}
+
 resource "aws_ssoadmin_permission_set" "readonly" {
-  instance_arn = tolist(data.aws_ssoadmin_instances.example.arns)[0]
+  instance_arn = tolist(data.aws_ssoadmin_instances.sso.arns)[0]
   name         = "ReadOnly"
 }
 
