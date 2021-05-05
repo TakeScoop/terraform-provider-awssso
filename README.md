@@ -22,6 +22,6 @@ data "awssso_ssoadmin_role" "readonly" {
 
 output "role" {
   description = "IAM role ARN for the role created by the AWS SSO instance for the AWS organization."
-  value = data.awssso_ssoadmin_role.sso_readonly.arn
+  value       = data.awssso_ssoadmin_role.sso_readonly.arn
 }
 ```
