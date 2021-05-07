@@ -12,9 +12,9 @@ import (
 	"github.com/takescoop/terraform-provider-awssso/awssso/internal/keyvaluetags"
 )
 
-func dataSourceAwsSsoAdminRole() *schema.Resource {
+func dataSourceAwsSsoRole() *schema.Resource {
 	return &schema.Resource{
-		Read: dataSourceAwsSsoAdminRoleRead,
+		Read: dataSourceAwsSsoRoleRead,
 
 		Schema: map[string]*schema.Schema{
 			"arn": {
@@ -62,7 +62,7 @@ func dataSourceAwsSsoAdminRole() *schema.Resource {
 	}
 }
 
-func dataSourceAwsSsoAdminRoleRead(d *schema.ResourceData, meta interface{}) error {
+func dataSourceAwsSsoRoleRead(d *schema.ResourceData, meta interface{}) error {
 	iamconn := meta.(*AWSClient).iamconn
 	ignoreTagsConfig := meta.(*AWSClient).IgnoreTagsConfig
 
