@@ -16,12 +16,12 @@ resource "aws_ssoadmin_permission_set" "readonly" {
   name         = "ReadOnly"
 }
 
-data "awssso_ssoadmin_role" "readonly" {
+data "awssso_role" "readonly" {
   permission_set_name = aws_ssoadmin_permission_set.readonly.name
 }
 
 output "role" {
   description = "IAM role ARN for the role created by the AWS SSO instance for the AWS organization."
-  value       = data.awssso_ssoadmin_role.sso_readonly.arn
+  value       = data.awssso_role.sso_readonly.arn
 }
 ```

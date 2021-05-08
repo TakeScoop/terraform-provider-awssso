@@ -183,7 +183,7 @@ func Provider() *schema.Provider {
 		},
 
 		DataSourcesMap: map[string]*schema.Resource{
-			"awssso_ssoadmin_role": dataSourceAwsSsoAdminRole(),
+			"awssso_role": dataSourceAwsSsoRole(),
 		},
 
 		ResourcesMap: map[string]*schema.Resource{},
