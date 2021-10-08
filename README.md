@@ -1,6 +1,10 @@
 # Terraform Provider for AWS SSO Admin Role
 
-This provider exposes a [data source](https://github.com/hashicorp/terraform-provider-aws/pull/18048) proposed to be merged into the upstream [terraform-provider-aws](https://github.com/hashicorp/terraform-provider-aws) project. The data source fetches the IAM role created in the target AWS account by the AWS SSO instance for the AWS organization.
+**Archived:** The official AWS provider now includes [`data.aws_iam_roles`](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_roles#roles-provisioned-by-aws-sso) which can be used to find one (or many) SSO roles.
+
+<hr>
+
+This provider exposes a [data source](https://github.com/hashicorp/terraform-provider-aws/pull/18048) that to be merged into the upstream [terraform-provider-aws](https://github.com/hashicorp/terraform-provider-aws) project. The data source fetches the IAM role created in the target AWS account by the AWS SSO instance for the AWS organization.
 
 ## Configuring the provider
 
